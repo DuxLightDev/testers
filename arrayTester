@@ -1,0 +1,23 @@
+public class array {
+    public static void main(String[] args){
+        String stringArray[];
+        stringArray = new String[7];
+        stringArray[0] = "h";
+        stringArray[1] = "i";
+        stringArray[2] = "m";
+        stringArray[3] = "i";
+        stringArray[4] = "c";
+        stringArray[5] = "a";
+        stringArray[6] = "h";
+
+        for(int blue = 0; blue < stringArray.length; blue++){
+            System.out.println(stringArray[blue]);
+        }
+    }
+
+}
+
+/* what i need to do: store who won from previous games in an array and have a command to view said array, so how do?
+store win or lose or tie somehow
+initialize to variable?
+*/
