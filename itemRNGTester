@@ -1,0 +1,35 @@
+import java.util.Random;
+
+public class itemRNG {
+    public static void main(String[] args){
+
+        Random random = new Random();
+
+        // attempt to add desc? to add maybe make second list and do something like that?
+        /* aka something like a method where if (weapon) then get the index of the weapon in weaponArray
+         and then make second list with all descriptions that correlates with weaponArray 
+         and just grab the same index
+         would make it so on pickup, gives brief descrption, but in inventory only shows stats and name
+         then would have to concatenate it by using two separate lists as mentioned before 
+        */
+        String stringTest = "Staff";
+        String weaponArray[];
+        weaponArray = new String [10];
+        weaponArray[0] = "Worldline Zero";
+        weaponArray[1] = "Xenophage";
+        weaponArray[2] = "Luna's " + stringTest;
+        weaponArray[3] = "The Lament";
+        weaponArray[4] = "Adored";
+        weaponArray[5] = "Luna's Howl";
+        weaponArray[6] = "Ethereal Key";
+        weaponArray[7] = "Redrix's Broadsword";
+        weaponArray[8] = "Hung Jury";
+        weaponArray[9] = "Rusty Dagger";
+        
+        for(int blue = 0; blue < 100; blue++){
+            System.out.println(weaponArray[random.nextInt(7)]);
+        }
+
+
+    }
+}
