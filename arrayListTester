@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class list {
+    public static void main(String[] args){
+        
+        Scanner scanner = new Scanner(System.in);
+        List<String> list = new ArrayList<String>();
+
+        list.add("mango");
+        list.add("apple");
+        list.add("banana");
+        list.add("peach");
+        list.add("cherries");
+
+        for(String frut:list){
+            System.out.println(frut);
+        }
+
+        System.out.println("Select an option to edit:");
+        String choice = scanner.nextLine();
+
+        if(list.contains(choice)){
+            System.out.println("Input your edit: ");
+            String edit = scanner.nextLine();
+            int index = list.indexOf(choice);
+            list.set(index, edit);
+            for(String frut:list) {
+                System.out.println(frut);
+            }
+
+
+        } else {
+            String string = "Invalid choice!";
+            for (int blue = 0; blue < string.length(); blue++){
+                char letter = string.charAt(blue);
+                System.out.print(letter);
+                try {
+                    Thread.sleep(100);
+                } catch(InterruptedException e) {
+
+                }
+            }
+            
+
+            scanner.close();
+
+        }
+
+
+    }
+}
