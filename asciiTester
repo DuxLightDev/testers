@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class ascii {
+public class tester {
 
     public static void main(String[] args) throws IOException {
 
@@ -12,12 +12,12 @@ public class ascii {
         //BufferedImage image = ImageIO.read(new File("/Users/mkyong/Desktop/logo.jpg"));
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         Graphics g = image.getGraphics();
-        g.setFont(new Font("SansSerif", Font.BOLD, 24));
+        g.setFont(new Font("SansSerif", Font.BOLD, 12)); //font size, font, and other font variations
 
         Graphics2D graphics = (Graphics2D) g;
         graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,
                 RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-        graphics.drawString("Welcome to life!", 10, 20);
+        graphics.drawString("VANS", 10, 20); // string you're drawing
 
         //save this image
         //ImageIO.write(image, "png", new File("/users/mkyong/ascii-art.png"));
@@ -26,7 +26,7 @@ public class ascii {
             StringBuilder sb = new StringBuilder();
             for (int x = 0; x < width; x++) {
 
-                sb.append(image.getRGB(x, y) == -16777216 ? " " : "~");
+                sb.append(image.getRGB(x, y) == -16777216 ? " " : "#"); //character used to draw string
 
             }
 
