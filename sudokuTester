@@ -1,0 +1,21 @@
+import java.util.Random;
+
+public class tester {
+    public static void main(String[] args) {
+
+        Random random = new Random();
+
+        int intArray[];
+        intArray = new int[81];
+        for(int i = 0; i < 81; i++){
+            if(i%9 != 0){
+            intArray[i] = random.nextInt(9-1)+1;
+
+            System.out.print(intArray[i]);
+            System.out.print(" ");
+            } else {
+                System.out.println("\n");
+            }
+        } 
+    }
+}
