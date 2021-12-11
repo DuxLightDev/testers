@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class tester {
+public class sudoku {
     public static void main(String[] args) {
 
         Random random = new Random();
@@ -8,13 +8,27 @@ public class tester {
         int intArray[];
         intArray = new int[81];
         for(int i = 0; i < 81; i++){
-            if(i%9 != 0){
-            intArray[i] = random.nextInt(9-1)+1;
-
+            if(i%9 == 0){
+            System.out.println("\n");
+            intArray[i] = random.nextInt(9)+1;
+            System.out.print("| "); // temp solution, figure out if can make it so has no side walls/barriers
             System.out.print(intArray[i]);
             System.out.print(" ");
+            
             } else {
+                intArray[i] = random.nextInt(9)+1;
+                System.out.print(intArray[i]);
+                System.out.print(" ");
+            }
+
+            if(i%3 == 2) {
+                System.out.print("| ");
+            }
+
+            if(i == 26 || i == 53){
                 System.out.println("\n");
+                System.out.print("-------------------------");
+
             }
         } 
     }
